@@ -1,9 +1,9 @@
-/* Linker script for the nRF52 - WITH SOFT DEVICE */
+/* Linker script for the nRF52 - WITH SOFT DEVICE s140 6.1.1 */
 MEMORY
 {
   /* NOTE K = KiBi = 1024 bytes */
-  FLASH : ORIGIN = 0x00026000, LENGTH = 796K /* 1024K - 512K */
-  RAM : ORIGIN = 0x2000B000, LENGTH = 212K /* 256K - 44K */
+  FLASH : ORIGIN = 0x00026000, LENGTH = 796K /* 1024K - 512K (soft device) */
+  RAM : ORIGIN = 0x20004000, LENGTH = 46K /* 64K - 16K (soft device) - 2K (stack) */
 }
 
 /* This is where the call stack will be allocated. */
